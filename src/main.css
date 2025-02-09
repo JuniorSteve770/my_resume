@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --light-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+.hero-section {
+  min-height: 80vh;
+  background: var(--light-bg);
+  padding: 4rem 0;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.expertise-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.tag {
+  background: var(--light-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.project-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 1rem;
+}

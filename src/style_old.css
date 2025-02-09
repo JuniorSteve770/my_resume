@@ -1,0 +1,39 @@
+/* Ensures the technologies are displayed properly */
+.tech-cell .d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Ensures badges remain visible */
+.tech-badge {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Responsive design for better alignment */
+@media (max-width: 768px) {
+  .tech-cell .d-flex {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tech-badge {
+    width: auto;
+    min-width: 90px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-cell .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tech-badge {
+    width: 100%;
+  }
+}
