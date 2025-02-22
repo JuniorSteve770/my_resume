@@ -3,7 +3,8 @@ import { Container, Row, Col, Button, Image, Badge } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 import githubLogo from 'D:/OLD PC/Desktop/diplomes/CV 2022/pierrick/CV_Alternance/a_project_site/github.png'; 
-import profilePic from 'D:/OLD PC/Desktop/diplomes/CV 2022/pierrick/CV_Alternance/a_project_site/photo1.jpg'; 
+import profilePic from 'D:/OLD PC/Desktop/diplomes/CV 2022/pierrick/CV_Alternance/a_project_site/photo2.jpg'; 
+
 import CV from '../images/CV_images/CV_Alesterd KAMELA.pdf';
 function scrollToSection(id) {
   const element = document.getElementById(id);
@@ -17,8 +18,8 @@ function scrollToSection(id) {
 
 function Hero() {
   const techStack = [
-    "Python", "C++", "VBA", "SQL", "JavaScript (React, Vue)", "//", "Data Science stack", "Machine Learning",
-    "Financial Modelling", "API Integration", "//", "Quantitative Finance", "Algorithmic Trading"
+    "Python", "C++/C#", "VBA", "SQL", "JavaScript (React, Vue)", "//", "Data Science stack", "Machine Learning",
+    "Financial Modelling", "API (Rest/GraphQL)", "//", "Quantitative Finance", "Algorithmic Trading"
   ];
   return (
     <section className="hero-section py-5">
@@ -53,8 +54,8 @@ function Hero() {
                 📌 Finance & IT Developer
                </h3>
                <p className="lead mb-4 text-justify">
-                Avec une double expertise en Finance et Big Data, je suis motivé par la conception et 
-                l'intégration de systèmes automatisés appliqué aux données et a Finance.
+                J'ai une double competance en Finance et Programmation et Big Data, je suis motivé par la conception et 
+                l'intégration de systèmes automatisés appliqué aux Données et Finance.
               </p>
               <p className="lead mb-4 text-justify">
                 Mon approche professionnelle repose sur :
@@ -67,10 +68,9 @@ function Hero() {
                 💡 Mon expertise couvre :
               
               <ul className="lead mb-4 text-justify">
-                ✅ Marchés financiers ✅ Gestion des Risques ✅ Programmation ✅ Data Science & Fintech. 
+                ✅ Finance de Marché ✅ Gestion des Risques ✅ Programmation ✅ Data Science & Fintech. 
               </ul>
-                🎯 Objectif : Approche IT et Quantitatives pour automatiser et reduire les erreurs...
-              </p>
+            </p>
             </motion.div>
           </Col>
         </Row>
@@ -80,11 +80,7 @@ function Hero() {
               <div className="d-flex flex-wrap justify-content-center gap-2">
                 {techStack.map((tech, idx) => (
                   <Badge bg="secondary" key={idx} className="p-2">{tech}</Badge>
-                ))}
-             
-            
-
-                        
+                ))}        
             <motion.div
             className="d-flex flex-wrap justify-content-center gap-3"
               // className="mb-3  gap-2 me-2 align-items-center justify-content-center "
