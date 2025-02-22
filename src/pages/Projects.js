@@ -88,7 +88,7 @@ function Projects() {
         {
           title: "My Beguinner Projects",
           description: "here are the links to sevrals junior projects on bellow programming languages",
-          techStack: ["PHP; ", "ReactJ; ","VueJs ;", "Javascript/ HTML / CSS", "Boostrap; ","google signIN"],
+          techStack: ["ReactJ; ","VueJs ;", "Javascript/ HTML / CSS", "Boostrap; ","google signIN"],
           links: ["https://juniorsteve770.github.io/react01/", "https://juniorsteve770.github.io/flowplus","https://juniorsteve770.github.io/whatsapp_build/", "https://youtu.be/-Q5OBsDfG_k"]
         },
         {
