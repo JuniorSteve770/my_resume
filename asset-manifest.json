@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/my_resume/static/css/main.d2bcb22d.css",
-    "main.js": "/my_resume/static/js/main.e2b0ba63.js",
+    "main.js": "/my_resume/static/js/main.8425ae6c.js",
     "static/media/bberg.jpg": "/my_resume/static/media/bberg.657aca14188920f02714.jpg",
     "static/media/risk management.jpg": "/my_resume/static/media/risk management.a0f2b5ed82f10ded7575.jpg",
     "static/media/python_stats.jpg": "/my_resume/static/media/python_stats.685f98767d4a178b46fe.jpg",
-    "static/media/photo1.jpg": "/my_resume/static/media/photo1.b32b8807e57772cf5468.jpg",
     "static/media/markovirz.JPG": "/my_resume/static/media/markovirz.b51d81adf1eff5d581ce.JPG",
     "static/media/Power_BI.jpg": "/my_resume/static/media/Power_BI.19ebb9ea00a9ab836672.jpg",
     "static/media/ml_Python_Sql.jpg": "/my_resume/static/media/ml_Python_Sql.b5b65363428c6a1558ff.jpg",
     "static/media/Udemy.PNG": "/my_resume/static/media/Udemy.c7e251df29c6ad9e6bb6.PNG",
+    "static/media/photo2.jpg": "/my_resume/static/media/photo2.01ca16db241fdcb996c9.jpg",
     "static/media/Csh.jpg": "/my_resume/static/media/Csh.ae6e55a60b3972f245c0.jpg",
     "static/media/Hottinguer.JPG": "/my_resume/static/media/Hottinguer.83b626ead2ee06049b8d.JPG",
     "static/media/CV_Alesterd KAMELA.pdf": "/my_resume/static/media/CV_Alesterd KAMELA.902ebeb4a8955a73e458.pdf",
@@ -18,10 +18,10 @@
     "static/media/portotrad.JPG": "/my_resume/static/media/portotrad.5b56303bde8c57d7d8b5.JPG",
     "index.html": "/my_resume/index.html",
     "main.d2bcb22d.css.map": "/my_resume/static/css/main.d2bcb22d.css.map",
-    "main.e2b0ba63.js.map": "/my_resume/static/js/main.e2b0ba63.js.map"
+    "main.8425ae6c.js.map": "/my_resume/static/js/main.8425ae6c.js.map"
   },
   "entrypoints": [
     "static/css/main.d2bcb22d.css",
-    "static/js/main.e2b0ba63.js"
+    "static/js/main.8425ae6c.js"
   ]
 }
