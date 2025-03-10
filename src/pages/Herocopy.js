@@ -54,8 +54,8 @@ function Hero() {
                 📌 Finance & IT Developer
                </h3>
                <p className="lead mb-4 text-justify">
-                J'ai une double competance en Finance et Programmation et Big Data, je suis motivé par la conception et 
-                l'intégration de systèmes automatisés appliqué aux Données et Finance.
+               Je suis passionné par la finance et la technologie(IT, Programmation, Data ), et toujours désireux d'apprendre et de progresser.
+               Mes compétences en Finance Quantitative, Data Science et Business Analyst   me sont précieuses dans mes missions quotidiennes.
               </p>
               <p className="lead mb-4 text-justify">
                 Mon approche professionnelle repose sur :
