@@ -54,7 +54,7 @@ function Hero() {
                 📌 Finance & IT Developer
                </h3>
                <p className="lead mb-4 text-justify">
-                J'ai une double competance en Finance et Programmation et Big Data, je suis motivé par la conception et 
+                J'ai une double compétence en Finance et Programmation et Big Data, je suis motivé par la conception et 
                 l'intégration de systèmes automatisés appliqué aux Données et Finance.
               </p>
               <p className="lead mb-4 text-justify">
