@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my_resume/static/css/main.d2bcb22d.css",
-    "main.js": "/my_resume/static/js/main.a7df91b7.js",
+    "main.js": "/my_resume/static/js/main.b523c064.js",
     "static/media/bberg.jpg": "/my_resume/static/media/bberg.657aca14188920f02714.jpg",
     "static/media/risk management.jpg": "/my_resume/static/media/risk management.a0f2b5ed82f10ded7575.jpg",
     "static/media/python_stats.jpg": "/my_resume/static/media/python_stats.685f98767d4a178b46fe.jpg",
@@ -18,10 +18,10 @@
     "static/media/portotrad.JPG": "/my_resume/static/media/portotrad.5b56303bde8c57d7d8b5.JPG",
     "index.html": "/my_resume/index.html",
     "main.d2bcb22d.css.map": "/my_resume/static/css/main.d2bcb22d.css.map",
-    "main.a7df91b7.js.map": "/my_resume/static/js/main.a7df91b7.js.map"
+    "main.b523c064.js.map": "/my_resume/static/js/main.b523c064.js.map"
   },
   "entrypoints": [
     "static/css/main.d2bcb22d.css",
-    "static/js/main.a7df91b7.js"
+    "static/js/main.b523c064.js"
   ]
 }
