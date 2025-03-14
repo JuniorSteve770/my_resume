@@ -54,7 +54,7 @@ function Hero() {
                 📌 Finance & IT Developer
                </h3>
                <p className="lead mb-4 text-justify">
-               Je suis passionné par la finance et la technologie(IT, Programmation, Data ), et toujours désireux d'apprendre et de progresser.
+               Je suis passionné par la Finance et la technologie (IT, Programmation, Data Science ), et toujours désireux d'apprendre et de progresser.
                Mes compétences en Finance Quantitative, Data Science et Business Analyst   me sont précieuses dans mes missions quotidiennes.
               </p>
               <p className="lead mb-4 text-justify">

@@ -95,7 +95,7 @@ function Projects() {
           title: "C#, C++ Software Toolstack; Network & Programming Paradigms",
           description: "IT Concepts, Network, Programming parradigms",
           techStack: ["Paradigms (OOP, MVC, SOLID); ", "Code Processes (TDD, BDD, SSD, Exeption Handling); ","Rest API, GraphQL;", "Network Protocols (TCP/IP, OSI, SFTP)"],
-          links: []
+          links: ["https://github.com/JuniorSteve770/PYTHON/blob/main/Projet%20Clients%20en%20C%23%2C%20MySQL%20et%20React.pdf"]
         }
       ]
     }
