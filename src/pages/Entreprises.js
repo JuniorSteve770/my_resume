@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, Badge, Image } from 'react-bootstrap';
+import { Container, Card, Badge, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Natixis from '../images/CV_images/NatixisGrd.JPG'; 
 import Hottinguer from '../images/CV_images/Hottinguer.JPG';
@@ -8,61 +8,73 @@ import portotrad from '../images/CV_images/portotrad.JPG';
 import  "../style_old.css";
 
 
+
+
+
 function Entreprises() {
-  const experiences = [
-    {
-      company: "BANK HOTINGUER",
-      logo: Hottinguer,
-      role: "Risk Management Apprentice",
-      missions: [
-        "Execution and Maintenance of daily tools and Models (VaR, Stress Test, Pricing Structured Products)",
-        "Pre-Trade Operation using Bloomberg to integrate Bonds, Trackers, ETF, UCITS in Bank Software JUMP",
-        "Constraints integration in Banking Software for Asset Management and Compliance",
-        "Worked on Risk Committee participation and collaboration with other teams"
-      ],
-      techStack: ["Bloomberg","VBA", "Python", "C++", "SQL","Access-Sgbd", "Excel", "SFTP-Server", "JUMP Software"]
-    },
-    {
-      company: "NATIXIS BANK",
-      logo: Natixis,
-      role: "Financial Analyst (Bonds, Equity,  Fixed Income, OTC)",
-      missions: [
-        "Managed bonds, equity, fixed income, and repo transactions using Summit Sec",
-        "Post-trade operations (verification, valuations, booking control) in interaction with Trading and banking software",
-        "Confirmation of market transactions, monitoring exceptions, payments, and settlement with counterparties",
-        "Automated ETL processes on datasets to analyze workload and increase performance by 20%"
-      ],
-      techStack: ["VBA", "Excel", "Depositaires (ICSD/DOM)","Summit Sec", "Track", "Bloomberg"]
-    },
-    {
-      company: "PORTOTRAD Academy",
-      logo: portotrad,
-      role: "Front Office Trader / Support Trader",
-      missions: [
-        "Trader and Trade Support in Forex and Cryptocurrency markets, focusing on building algo trading tools and strategies",
-        "python for Web Scraping on Market Data for position taking (NFP, CPI, PMI, RS, LIBOR, EURIBOR, FED FUNDS Rates)",
-        "Market Analysis (fundamental, Technical, Patterns) and trading strategies for scalping, intra-day, and swing trading",
-        "Developed and optimized trading strategies including (MACD, RSI, BB, MM, spreads, swaps, and lot sizing) implementation "
-      ],
-      techStack: ["MetaTrader 4 & 5", "Binance-API", "Coinbase-API", "Trading View", "Excell-VBA", "Python"]
-    },
-    {
-      company: "KEVMAX_SARL & POLYTECHNIQUE CMR",
-      logo: Kevmax,
-      role: "Web Developer & IT Support",
-      missions: [
-        "Developed front and back-end applications using Agile & Scrum methodologies",
-        "Write and maintain documentation for the clients project using (UML, Merise, etc.)",
-        "Structured databases using UML, Merise, and normalization techniques",
-        "Created and maintained company websites and various web applications",
-        "Performed OS system updates, code debugging, and IT support for various clients"
-      ],
-      techStack: ["Python (Django & Flask)", "JavaScript (React.js, Redux, Vue.js)", "TypeScript,", "Material UI",  "SQL", "Firebase", "UML","Merise", "API-Rest"," GraphQL","Git & GitHub"]
-    }
-  ];
+const experiences = [
+  {
+    company: "BANK HOTINGUER",
+    logo: Hottinguer,
+    role: "Risk Management Apprentice",
+    missions: [
+      "Developed and maintained quantitative tools and models: VaR, Stress Testing, and Structured Product Pricing",
+      "Integrated financial instruments (Bonds, ETFs, UCITS) into JUMP via Bloomberg Pre-Trade workflows",
+      "Implemented compliance and asset management constraints in core banking systems",
+      "Participated in risk committees and collaborated cross-functionally with Front, MO, and Compliance teams"
+    ],
+    techStack: ["Bloomberg", "VBA", "Python", "C++", "SQL", "Access-SGBD", "Excel", "SFTP-Server", "JUMP Software"]
+  },
+  {
+    company: "NATIXIS BANK",
+    logo: Natixis,
+    role: "Financial Analyst (Bonds, Equity, Fixed Income, OTC)",
+    missions: [
+      "Processed and analyzed trades (bonds, equity, repo) via Summit Sec – emphasis on trade life cycle & fixed income",
+      "Executed post-trade operations: valuation control, booking verification, trade reconciliations",
+      "Managed confirmations, exception monitoring, settlements and payment workflows with counterparties",
+      "Automated BI/BA data flows with VBA to reduce operational workload and improve performance (+20%)"
+    ],
+    techStack: ["VBA", "Excel", "Depositaires (ICSD/DOM)", "Summit Sec", "Track", "Bloomberg"]
+  },
+  {
+    company: "PORTOTRAD Academy",
+    logo: portotrad,
+    role: "Front Office Trader / Trading Support",
+    missions: [
+      "Operated on Forex & Crypto markets as trader and support, focused on quantitative strategy implementation",
+      "Performed data scraping and fundamental data analysis (macro releases, rates) to support trading decisions",
+      "Designed and executed trading strategies: scalping, intra-day, swing based on market technical indicators",
+      "Built backtested models based on Market Regimes, VPS Deployment,  (Spread/Swap analysis, Lot sizing)",
+      "Python, C#,  API REST(JSON/XML/sockets), FIX (heartbeat), Orders Automation (Market/Limit/Stop)"
+    ],
+    techStack: ["MetaTrader 4 & 5", "Binance-API", "Coinbase-API", "TradingView", "Excel-VBA", "Python"]
+  },
+  {
+    company: "KEVMAX_SARL & POLYTECHNIQUE CMR",
+    logo: Kevmax,
+    role: "Web Developer & IT Support",
+    missions: [
+      "Developed full-stack web applications in an Agile/Scrum context",
+      "Designed technical specifications and documentation using UML/Merise methodologies",
+      "Structured and normalized relational databases (SQL) to optimize backend systems",
+      "Managed web platforms, debugged production code, provided IT support and software maintenance",
+      "Implemented REST/GraphQL APIs and CI/CD best practices for scalable delivery"
+    ],
+    techStack: [
+      "Python (Django & Flask)",
+      "JavaScript (React.js, Redux, Vue.js)",
+      "TypeScript", "Material UI",
+      "SQL", "Firebase",
+      "UML", "Merise",
+      "API-REST", "GraphQL",
+      "Git & GitHub"
+    ]
+  }
+];
 
 
-  return (
+return (
     <section className="experience-section py-5" id="experience">
       <Container>
         <motion.h3 
@@ -74,46 +86,40 @@ function Entreprises() {
           🏢 Professional Experience
         </motion.h3>
 
-        <Table bordered hover responsive className="text-center mt-2">
-          <thead>
-            <tr>
-              <th style={{ width: '20%' }} className="company-column">Company</th>
-              <th style={{ width: '60%' }} className="missions-column">Responsibilities & Missions</th>
-              <th style={{ width: '20%' }} className="tech-column">Technologies</th>
-            </tr>
-          </thead>
-          <tbody>
-            {experiences.map((exp, index) => (
-              <tr key={index}>
-                <td className="fw-bold align-middle company-cell">
-                  <Image src={exp.logo} alt={exp.company} fluid className="mb-2 company-logo" />
-                  <br/>{exp.company}
-                </td>
-                <td className="missions-cell">
-                  <strong>{exp.role}</strong>
-                  <ul className="text-start">
-                    {exp.missions.map((mission, idx) => (
-                      <li key={idx}>{mission}</li>
-                    ))}
-                  </ul>
-                </td>
-                <td className="tech-cell">
-            <div className="d-flex flex-wrap justify-content-center gap-2">
-              {exp.techStack.map((tech, id) => (
-                <Badge bg="secondary" className="p-2 tech-badge" key={id}>{tech}</Badge>
-              ))}
-            </div>
-          </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={index}
+            className="mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <Card className="shadow-sm">
+              <Card.Header className="bg-dark text-white d-flex align-items-center justify-content-between">
+                <img src={exp.logo} alt={exp.company} style={{ height: 60 }} />
+                <strong className="h5 text-center">{exp.company}</strong>
+              </Card.Header>
+              <Card.Body>
+                <Card.Title className="text-primary text-center mb-3 h5">{exp.role}</Card.Title>
+                <ul className="mb-3">
+                  {exp.missions.map((mission, idx) => (
+                    <li key={idx} className="text-muted">{mission}</li>
+                  ))}
+                </ul>
+                <div className="d-flex flex-wrap gap-2 justify-content-center">
+                  {exp.techStack.map((tech, id) => (
+                    <Badge bg="secondary" className="p-2" key={id}>{tech}</Badge>
+                  ))}
+                </div>
+              </Card.Body>
+            </Card>
+          </motion.div>
+        ))}
       </Container>
     </section>
   );
 }
-
-
 
 export default Entreprises;
 

@@ -1,14 +1,18 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import profilePi from '../images/CV_images/bmcBloomberg.jpg'; 
 import profilePic from '../images/CV_images/bberg.jpg'; 
 import profilePic0 from '../images/CV_images/Csh.jpg'; 
+import profilePic00 from '../images/CV_images/CsharpMultitrad.jpg'; 
 import profilePic1 from '../images/CV_images/markovirz.JPG'; 
 import profilePic2 from '../images/CV_images/ml_Python_Sql.jpg'; 
 import profilePic3 from '../images/CV_images/Power_BI.jpg'; 
 import profilePic4 from '../images/CV_images/python_stats.jpg'; 
 import profilePic6 from '../images/CV_images/risk management.jpg'; 
 import profilePic7 from '../images/CV_images/Udemy.PNG'; 
+import profilePic8 from '../images/CV_images/Udemy.PNG'; 
+
 
 
 
@@ -25,9 +29,13 @@ function Certifications() {
       image: "/path-to-aws-cert.png",
       verificationUrl: "https://aws.amazon.com/verify"
     }, */
-    
     {
       title: "Bloomberg Terminal ",
+      alt: "Csh",
+      image: profilePi,
+    }, 
+    {
+      title: "Bloomberg Exam ",
       alt: "Csh",
       image: profilePic,
     },
@@ -35,6 +43,21 @@ function Certifications() {
       title: "C# essential Concepts",
       alt: "Csh",
       image: profilePic0
+    },
+        {
+      title: "C# essential Concepts",
+      alt: "Csh",
+      image: profilePic00
+    },
+        {
+      title: "Machine Learning in SQL Server using Python",
+      alt: "bberg",
+      image: profilePic2,
+    },
+        {
+      title: "POWER BI Certification",
+      alt: "bberg",
+      image: profilePic3,
     },
     {
       title: "Python for Algorithmic Trading",
@@ -52,17 +75,11 @@ function Certifications() {
       image: profilePic4,
     },
     {
-      title: "Machine Learning in SQL Server using Python",
+      title: "RISK MANAGEMENT CERTIFICATION",
       alt: "bberg",
-      image: profilePic2,
+      image: profilePic6,
     },
-    {
-      title: "POWER BI Certification",
-      alt: "bberg",
-      image: profilePic3,
-    },
-
-    {
+      {
       title: "RISK MANAGEMENT CERTIFICATION",
       alt: "bberg",
       image: profilePic6,

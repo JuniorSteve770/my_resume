@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, Badge, Card, Row, Col, Button } from 'react-bootstrap';
+import { Container, Table, Badge } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 
@@ -102,134 +102,58 @@ function Projects() {
    
   ];
   return (
-    <section className="projects-section py-5" id="projects">
+    <section className="projects-section py-1" id="projects">
       <Container>
         <motion.h2 
-          className="text-center display-5 mb-5"
+          className="text-center display-5 mt-0 mb-2"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
         >
           🚀 My Projects
         </motion.h2>
 
-        {/* Desktop View - Table */}
-        <div className="d-none d-lg-block">
-          <Table bordered hover responsive className="align-middle">
-            <thead className="table-dark">
-              <tr>
-                <th style={{ width: '20%' }}>Domain</th>
-                <th style={{ width: '50%' }}>Project Details & Tech Stack</th>
-                <th style={{ width: '30%' }}>Links</th>
-              </tr>
-            </thead>
-            <tbody>
-              {projects.map((category, index) => (
-                category.projects.map((project, idx) => (
-                  <tr key={`${index}-${idx}`}>
-                    {idx === 0 && (                    
-                      <td rowSpan={category.projects.length} className="fw-bold align-middle">
-                        <Badge bg="badge bg-primary" className="fs-6 p-2 w-100">{category.domain}</Badge>
-                      </td>
-                    )}
-                    <td>
-                      <h5 className="fw-bold text-primary">{project.title}</h5>
-                      <p className="text-muted">{project.description}</p>
-                      <div className="d-flex flex-wrap gap-2">
-                        {project.techStack.map((tech, id) => (
-                          <Badge bg="light" text="dark" className="p-2 border" key={id}>
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </td>
-                    <td>
-                      <div className="d-grid gap-2">
-                        {project.links.map((link, linkIdx) => (
-                          <Button 
-                            variant="outline-primary" 
-                            href={link} 
-                            target="_blank" 
-                            rel="noreferrer"
-                            key={linkIdx}
-                            className="text-start"
-                          >
-                            View Project {linkIdx + 1} →
-                          </Button>
-                        ))}
-                        {project.links.length === 0 && (
-                          <span className="text-muted">Coming soon</span>
-                        )}
-                      </div>
-                    </td>
-                  </tr>
-                ))
-              ))}
-            </tbody>
-          </Table>
-        </div>
-
-        {/* Mobile View - Cards */}
-        <div className="d-lg-none">
-          <Row className="g-4">
+        <Table bordered hover responsive className="text-center mt-2">
+          <thead>
+            <tr>
+              <th style={{ width: '20%' }}>Domain</th>
+              <th style={{ width: '50%' }}>Project Details & Tech Stack</th>
+              <th style={{ width: '20%' }}>Links</th>
+            </tr>
+          </thead>
+          <tbody>
             {projects.map((category, index) => (
-              <React.Fragment key={index}>
-                <Col xs={12}>
-                  <h4 className="fw-bold text-center mb-3 p-2 badge bg-primary text-white rounded">
-                    {category.domain}
-                  </h4>
-                </Col>
-                {category.projects.map((project, idx) => (
-                  <Col xs={12} key={idx}>
-                    <Card className="h-100 shadow-sm">
-                      <Card.Body>
-                        <Card.Title className="fw-bold text-primary">
-                          {project.title}
-                        </Card.Title>
-                        <Card.Text className="text-muted">
-                          {project.description}
-                        </Card.Text>
-                        <div className="mb-3">
-                          <h6 className="fw-bold">Tech Stack:</h6>
-                          <div className="d-flex flex-wrap gap-2">
-                            {project.techStack.map((tech, id) => (
-                              <Badge bg="light" text="dark" className="p-2 border" key={id}>
-                                {tech}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="d-grid gap-2">
-                          {project.links.map((link, linkIdx) => (
-                            <Button 
-                              variant="outline-primary" 
-                              href={link} 
-                              target="_blank" 
-                              rel="noreferrer"
-                              key={linkIdx}
-                              size="sm"
-                            >
-                              View Project {linkIdx + 1} →
-                            </Button>
-                          ))}
-                          {project.links.length === 0 && (
-                            <span className="text-muted text-center">Coming soon</span>
-                          )}
-                        </div>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </React.Fragment>
+              category.projects.map((project, idx) => (
+                <tr key={`${index}-${idx}`}>
+                  {idx === 0 && (                    
+                    <td rowSpan={category.projects.length} className="fw-bold align-middle">{category.domain}</td>
+                  )}
+                  <td>
+                    <strong>{project.title}</strong>
+                    <p>{project.description}</p> 
+                    
+                    <div className="d-flex flex-wrap justify-content-center gap-2">
+                      {project.techStack.map((tech, id) => 
+                        (<Badge bg="secondary" className="p-1 tech-badge"   key={id}>{tech}</Badge>))}
+                    </div>
+                  </td>
+                  <td>
+                    {project.links.map((link, linkIdx) => (
+                      <a key={linkIdx} href={link} className="btn btn-outline-primary btn-sm d-block mb-1" target="_blank" rel="noreferrer">
+                        View Project {linkIdx + 1} →
+                      </a>
+                    ))}
+                  </td>
+                </tr>
+              ))
             ))}
-          </Row>
-        </div>
+          </tbody>
+        </Table>
       </Container>
     </section>
   );
 }
-
 export default Projects;
+
 
 

@@ -4,81 +4,77 @@ import { motion } from 'framer-motion';
 
 const expertiseData = [
   {
-    title: 'Finance Quantitative & Modélisation & Pricing ',
+    title: 'Quantitative Finance & Modeling',
     icon: '📊',
     details: {
       competencies: [
-        ' Marchés (Bonds, Equity Fx-income, Forex, Derivatives(Options, Swap, Future))',
-        ' Optimisation portefeuille (CAPM, Factor investing,  Markowitz, Efficient Frontier)',
-        ' Risque de Credit: PD (Prob Default), LGD (Loss Given Default), EAD (Exposure at Default) ',
-        ' Risque Marché (VaR, ES, CAViaR, Greeks, ARCH, GARCH)',
-        ' Modeles Pricing (Black-Scholes, Binomial, SARR, Volatility)',
-        ' Analyse de sensibilité des Grecs, Stress-testing et Backtesting',
+        'Pricing models (Black-Scholes, SABR, Heston)',
+        'Credit and Market Risk: VaR, CVaR, EAD, LGD, PD',
+        'Derivatives: Swaps, Options, Futures',
+        'Stress testing, backtesting, Greeks sensitivity',
+        'Portfolio optimization (CAPM, Markowitz)'
       ],
       projects: [
-        '- Pricing avec modèles Black-Scholes, Binomial , SABR et Heston',
-        '- Volatility smiles en Log et log-normal grace au modele SABR et Vol Implicite ',
-        '- Comparaison des mesures de volatilités VaR et CAViaR et Backtesting.',
-        '- Simulation de Credit Risk (PD, LGD, EAD) pour analyser les risques de Defauts '
+        '- Default risk simulation (PD, LGD, EAD)',
+        '- Volatility smile and implied volatility analysis',
+        '- Pricing of complex derivative products',
+        '- VaR/CVaR comparative analysis on market data'
       ]
     }
   },
   {
-    title: 'Trading Algorithmique & Backtetsting de Stratégies',
+    title: 'Algorithmic Trading & Backtesting',
     icon: '📈',
     details: {
       competencies: [
-        ' Web Scaping de données de Marché News, Binance API, Yahoo API, TradingView',
-        ' Développement et Backtesting de Stratégies (MACD, RSI, BB, MACD)',
-        ' Trading automatisé sur Broker MetaTrader 4, Exchange Crypto ',
-        ' Conception et Intégration d’algorithmes de Machine Learning en trading',
-        ' Gestion du risque(Vol) et exécution des ordres en temps réel(Spread)',
-        ' Développement de Dataflow,  Dashboard TCD/PowerBI,/Python pour suivi P&L'
+        'Strategies (MACD, RSI, arbitrage)',
+        'Market data via APIs (Binance, Yahoo, TradingView)',
+        'Automated trading (MetaTrader 4, Crypto)',
+        'Machine Learning in trading',
+        'Risk management (Volatility, Spread), PnL monitoring (Power BI, Python)'
       ],
       projects: [
-        '- Backtesting de stratégies de trading sur Forex, Crypto en periode Daily [Close] )',
-        '- Algo-trading sur crypto avec Riskfolio-Lib et Tachnique Arbitrage sur FX',
-        '- Développement d’une stratégie de scalping et swing trading',
-        '- ETL Pipeline pour Automatisation stratégie, PnL, monitoring en VBA'
+        '- Backtesting of Forex/Crypto strategies (Daily Close)',
+        '- Scalping and swing trading strategy development',
+        '- Crypto algo-trading with Riskfolio-Lib',
+        '- Automated PnL pipeline using VBA/Python'
       ]
     }
   },
   {
-    "title": "Data Science & Machine Learning ",
-    "icon": "🤖",
-    "details": {
-      "competencies": [
-        "Prévision des tendances de marché avec GARCH, ARIMA, XGBoost, LSTM ",
-        "Algo. Clustering (K-Means, DBSCAN) et analyse factorielle (PCA, ACM, ARMA)",
-        "Conception de Process  ETL, Data Pipelines sur SQL Server, API(Rest, FastAPI, Flask)",
-        "- Automatisation des requêtes SQL et rapports pour le Risk Management et la compliance",
-        "Fort interet pour la Fintech, Conteneurs Docker, et Cloud computing (CI/CD, AWS, GCP, Azure, Databricks)"
+    title: 'Data Science & Machine Learning',
+    icon: '🤖',
+    details: {
+      competencies: [
+        'Forecasting: GARCH, ARIMA, XGBoost, LSTM',
+        'Clustering & Factor Analysis (PCA, DBSCAN)',
+        'ETL & Data Pipelines (SQL, API, FastAPI, Flask)',
+        'Reporting automation for risk management',
+        'Cloud & CI/CD: AWS, GCP, Azure, Databricks'
       ],
-      "projects": [
-        "- Prédiction grace au Random Forest, Boosting (XGBoost, LightGBM) et LSTM",
-        "- Scraping, NLP et analyse de sentiment des news financières et prise de décision",
-        "- Développement  d’un systeme de recommandation d’actifs basé sur la Cointegration"
+      projects: [
+        '- Predictive modeling (XGBoost, LSTM)',
+        '- Financial sentiment analysis & scraping',
+        '- Asset recommendation system using cointegration'
       ]
     }
   },
   {
-    title: 'Développement IT & Automatisation en Finance',
+    title: 'IT Development & Automation in Finance',
     icon: '💻',
     details: {
       competencies: [
-        ' Développement en Python, C++, SQL, VBA, JavaScript (React, Vue)',
-        ' Création d’applications financières et outils d’analyse de marché',
-        ' ETL pour la collecte, transformation et stockage de données en SQL',
-        ' Automatisation et optimisation de processus de gestion de Données',
-        ' Développement d’ETL et API pour la récupération de données marché'
+        'Languages: Python, SQL, VBA, C++, React',
+        'Business tools & process automation (VBA/Python)',
+        'ETL, REST APIs, market data processing',
+        'Web & server application deployment',
+        'Functional & technical specifications'
       ],
       projects: [
-        '- Conception de Cahier des Charges et Specifications Fonctionnelles et Techniques)',
-        '- Développement d’une application Web PHP, Django, Comptabilité en VBA',
-        '- Automatisation des tâches et reporting par mail avec VBA et Python',
-        '- Création d’une application web interactive avec React et Vue.js',
-        '- Déploiement et gestion d’applications conteneurisées et sur Serveur',
-        '- Intégration d’APIs financières pour data streaming et backtesting'
+        '- Automation of business reporting & tasks',
+        '- Web development with React, Django, PHP',
+        '- Writing functional specs (BA/IT)',
+        '- Financial APIs and real-time backtesting'
       ]
     }
   }
