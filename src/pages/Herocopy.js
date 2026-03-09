@@ -19,43 +19,57 @@ function Hero() {
     <section className="hero-section py-5">
       <Container>
         <motion.div
-          className="d-flex flex-wrap justify-content-center gap-3 mb-4"
+          className="d-flex flex-column align-items-center mb-5 pt-4 mt-4 mt-lg-0 w-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <Button
-            href="https://github.com/JuniorSteve770"
-            target="_blank"
-            className="d-flex align-items-center gap-2"
-            style={{ backgroundColor: '#24292f', color: '#fff', border: '2px solid var(--primary-color)', boxShadow: '0 4px 14px 0 rgba(36, 41, 47, 0.4)' }}
-          >
-            My Github
-            <FaGithub size={20} />
-          </Button>
-          <Button onClick={() => scrollToSection('expertise')} variant="outline-primary">
-            Professional Xperiences
-          </Button>
-          <Button onClick={() => scrollToSection('projects')} variant="outline-primary">
-            My Projects
-          </Button>
-          <Button as={Link} to="/ai-projects" variant="outline-success" className="fw-bold">
-            AI & Algo Trading
-          </Button>
-          <Button onClick={() => scrollToSection('certifications')} variant="outline-primary">
-            My Certifications
-          </Button>
-          <Button
-            href="https://www.linkedin.com/in/alesterd-kamela-33245b1b3/"
-            target="_blank"
-            className="d-flex align-items-center gap-2 border-0"
-            style={{ backgroundColor: '#0077b5', color: '#fff', boxShadow: '0 4px 14px 0 rgba(0, 119, 181, 0.4)' }}
-          >
-            <FaLinkedin size={20} /> LinkedIn
-          </Button>
+          {/* Main Navigation & Social Menu */}
+          <Row className="justify-content-center g-2 g-md-3 mb-2" style={{ maxWidth: '1200px', width: '100%' }}>
+            <Col xs={6} md={2}>
+              <Button onClick={() => scrollToSection('expertise')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+                Experiences
+              </Button>
+            </Col>
+            <Col xs={6} md={2}>
+              <Button onClick={() => scrollToSection('projects')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+                My Projects
+              </Button>
+            </Col>
+            <Col xs={6} md={2}>
+              <Button as={Link} to="/ai-projects" variant="outline-success" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+                AI & Algo Trading
+              </Button>
+            </Col>
+            <Col xs={6} md={2}>
+              <Button onClick={() => scrollToSection('certifications')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+                Certifications
+              </Button>
+            </Col>
+            <Col xs={6} md={2}>
+              <Button
+                href="https://github.com/JuniorSteve770"
+                target="_blank"
+                className="d-flex justify-content-center align-items-center gap-2 fw-bold w-100 h-100 pb-1 text-wrap"
+                style={{ backgroundColor: '#24292f', color: '#fff', border: 'none', boxShadow: '0 4px 10px rgba(36, 41, 47, 0.3)', minHeight: '50px', fontSize: '1.2rem' }}
+              >
+                <FaGithub size={18} /> Github
+              </Button>
+            </Col>
+            <Col xs={6} md={2}>
+              <Button
+                href="https://www.linkedin.com/in/alesterd-kamela-33245b1b3/"
+                target="_blank"
+                className="d-flex justify-content-center align-items-center gap-2 fw-bold w-100 h-100 pb-1 border-0 text-wrap"
+                style={{ backgroundColor: '#0077b5', color: '#fff', boxShadow: '0 4px 10px rgba(0, 119, 181, 0.3)', minHeight: '50px', fontSize: '1.2rem' }}
+              >
+                <FaLinkedin size={18} /> LinkedIn
+              </Button>
+            </Col>
+          </Row>
         </motion.div>
 
-        <Row className="align-items-center text-start">
+        <Row className="align-items-center text-center text-lg-start">
           <Col lg={4} className="text-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -116,9 +130,9 @@ function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h6 className="h3 fw-bold mb-4" style={{ color: 'var(--primary-color)' }}>
+              <h6 className="h3 fw-bold mb-4 text-center text-lg-start" style={{ color: 'var(--primary-color)' }}>
                 Quant IT & Research | Data Sce & DevOps <br className="d-none d-lg-block" />
-                <span className="d-block mt-2 ms-4 ms-lg-5">Trade support & Financial Analyst</span>
+                <span className="d-block mt-2 ms-lg-5">Trade support & Financial Analyst</span>
               </h6>
 
               <p className="lead mb-4 text-justify">
