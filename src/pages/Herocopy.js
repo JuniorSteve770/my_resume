@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button, Image, Badge } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -15,6 +15,7 @@ function scrollToSection(id) {
 }
 
 function Hero() {
+  const [openAccordion, setOpenAccordion] = useState(null);
   return (
     <section className="hero-section py-5">
       <Container>
@@ -24,29 +25,30 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          {/* Main Navigation & Social Menu */}
-          <Row className="justify-content-center g-2 g-md-3 mb-2" style={{ maxWidth: '1200px', width: '100%' }}>
+          {/* Main Navigation - 4 buttons */}
+          <Row className="justify-content-center g-2 g-md-3 w-100">
             <Col xs={6} md={2}>
-              <Button onClick={() => scrollToSection('expertise')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+              <Button onClick={() => scrollToSection('expertise')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{ minHeight: '50px', fontSize: '1.2rem' }}>
                 Experiences
               </Button>
             </Col>
             <Col xs={6} md={2}>
-              <Button onClick={() => scrollToSection('projects')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+              <Button onClick={() => scrollToSection('projects')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{ minHeight: '50px', fontSize: '1.2rem' }}>
                 My Projects
               </Button>
             </Col>
             <Col xs={6} md={2}>
-              <Button as={Link} to="/ai-projects" variant="outline-success" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+              <Button as={Link} to="/ai-projects" variant="outline-success" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{ minHeight: '50px', fontSize: '1.2rem' }}>
                 AI & Algo Trading
               </Button>
             </Col>
             <Col xs={6} md={2}>
-              <Button onClick={() => scrollToSection('certifications')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{minHeight: '50px', fontSize: '1.2rem'}}>
+              <Button onClick={() => scrollToSection('certifications')} variant="outline-primary" className="fw-bold w-100 h-100 py-2 d-flex flex-column justify-content-center align-items-center text-center px-1 text-wrap" style={{ minHeight: '50px', fontSize: '1.2rem' }}>
                 Certifications
               </Button>
             </Col>
-            <Col xs={6} md={2}>
+            {/* Social Links - visible on desktop only in this Row */}
+            <Col md={2} className="d-none d-md-block">
               <Button
                 href="https://github.com/JuniorSteve770"
                 target="_blank"
@@ -56,7 +58,31 @@ function Hero() {
                 <FaGithub size={18} /> Github
               </Button>
             </Col>
-            <Col xs={6} md={2}>
+            <Col md={2} className="d-none d-md-block">
+              <Button
+                href="https://www.linkedin.com/in/alesterd-kamela-33245b1b3/"
+                target="_blank"
+                className="d-flex justify-content-center align-items-center gap-2 fw-bold w-100 h-100 pb-1 border-0 text-wrap"
+                style={{ backgroundColor: '#0077b5', color: '#fff', boxShadow: '0 4px 10px rgba(0, 119, 181, 0.3)', minHeight: '50px', fontSize: '1.2rem' }}
+              >
+                <FaLinkedin size={18} /> LinkedIn
+              </Button>
+            </Col>
+          </Row>
+
+          {/* Social Links - Mobile only: identical Row structure to nav row above */}
+          <Row className="g-2 g-md-3 mt-2 d-md-none w-100">
+            <Col xs={6}>
+              <Button
+                href="https://github.com/JuniorSteve770"
+                target="_blank"
+                className="d-flex justify-content-center align-items-center gap-2 fw-bold w-100 h-100 pb-1 text-wrap"
+                style={{ backgroundColor: '#24292f', color: '#fff', border: 'none', boxShadow: '0 4px 10px rgba(36, 41, 47, 0.3)', minHeight: '50px', fontSize: '1.2rem' }}
+              >
+                <FaGithub size={18} /> Github
+              </Button>
+            </Col>
+            <Col xs={6}>
               <Button
                 href="https://www.linkedin.com/in/alesterd-kamela-33245b1b3/"
                 target="_blank"
@@ -108,7 +134,7 @@ function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="mt-5 d-flex flex-column align-items-center gap-1"
+              className="mt-2 mt-lg-5 d-flex flex-column align-items-center gap-1"
             >
               <a
                 href="https://wa.me/33745489344"
@@ -124,7 +150,7 @@ function Hero() {
             </motion.div>
           </Col>
 
-          <Col lg={8} className="pt-4">
+          <Col lg={8} className="pt-4 mt-4 mt-lg-0">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -160,9 +186,11 @@ function Hero() {
           </Col>
         </Row>
 
-        <div className="text-center mt-5 mb-3">
-          <h4 className="fw-bold mb-4" style={{ color: 'var(--primary-color)' }}>🛠 Technical Stack & Expertise</h4>
-          <Row className="justify-content-center g-4">
+        <div className="mt-5 mb-3">
+          <h4 className="fw-bold mb-4 text-center" style={{ color: 'var(--primary-color)' }}>🛠 Technical Stack & Expertise</h4>
+
+          {/* Desktop: 4 column grid */}
+          <Row className="justify-content-center g-4 d-none d-md-flex">
             {techStack.map((categoryGroup, index) => (
               <Col md={6} lg={3} key={index}>
                 <div className="p-3 shadow-sm h-100 rounded" style={{ backgroundColor: 'var(--card-bg)', borderTop: '4px solid var(--primary-color)', borderLeft: '1px solid var(--border-color)', borderRight: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
@@ -178,6 +206,34 @@ function Hero() {
               </Col>
             ))}
           </Row>
+
+          {/* Mobile: accordion */}
+          <div className="d-md-none">
+            {techStack.map((categoryGroup, index) => {
+              const isOpen = openAccordion === index;
+              return (
+                <div key={index} className="mb-2 rounded shadow-sm overflow-hidden" style={{ border: '1px solid var(--border-color)', borderTop: '3px solid var(--primary-color)' }}>
+                  <button
+                    onClick={() => setOpenAccordion(isOpen ? null : index)}
+                    className="w-100 d-flex justify-content-between align-items-center px-3 py-3 fw-bold"
+                    style={{ background: 'var(--card-bg)', border: 'none', color: 'var(--primary-color)', fontSize: '1rem', cursor: 'pointer' }}
+                  >
+                    <span>{categoryGroup.category}</span>
+                    <span style={{ transition: 'transform 0.2s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', fontSize: '0.8rem' }}>▼</span>
+                  </button>
+                  {isOpen && (
+                    <div className="px-3 pb-3 d-flex flex-wrap justify-content-center gap-2" style={{ backgroundColor: 'var(--card-bg)' }}>
+                      {categoryGroup.skills.map((skill, idx) => (
+                        <Badge bg="secondary" key={idx} className="px-2 py-2 fs-6 shadow-sm border border-secondary">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </Container>
     </section>

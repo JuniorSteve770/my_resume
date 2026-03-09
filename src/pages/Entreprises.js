@@ -34,12 +34,14 @@ function Entreprises() {
             transition={{ delay: index * 0.1 }}
           >
             <Card className="shadow-sm">
-              <Card.Header className="bg-dark text-white d-flex align-items-center justify-content-between">
-                {exp.logo && <Image src={exp.logo} alt={exp.company} style={{ height: 60, borderRadius: '8px' }} />}
-                <strong className="h5 text-center mx-auto">{exp.company}</strong>
+              <Card.Header className="d-flex align-items-center gap-3 py-3" style={{ backgroundColor: 'var(--card-bg)', borderBottom: '2px solid var(--primary-color)' }}>
+                {exp.logo && <Image src={exp.logo} alt={exp.company} style={{ height: 50, borderRadius: '8px', flexShrink: 0 }} />}
+                <div>
+                  <div className="fw-bold text-primary" style={{ fontSize: '1rem', lineHeight: '1.3' }}>{exp.role}</div>
+                  <div className="text-muted" style={{ fontSize: '0.85rem' }}>{exp.company}</div>
+                </div>
               </Card.Header>
               <Card.Body>
-                <Card.Title className="text-primary text-center mb-3 h5">{exp.role}</Card.Title>
                 <ul className="mb-3">
                   {exp.missions.map((mission, idx) => (
                     <li key={idx} className="fw-medium lh-lg theme-text">{mission}</li>

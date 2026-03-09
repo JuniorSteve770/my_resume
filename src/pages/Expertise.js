@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { educationData } from '../data/resumeData';
@@ -82,6 +82,7 @@ const expertiseData = [
 ];
 
 function Expertise() {
+  const [openEduAccordion, setOpenEduAccordion] = useState(null);
   return (
     <Container className="py-5" id="expertise">
       {/* Education & Academic Path Section */}
@@ -94,9 +95,10 @@ function Expertise() {
       >
         <h2 className="text-center display-6 mb-5 fw-bold">Academic Path & Dual Competence</h2>
         <p className="text-center lead mb-5 text-muted">
-          Educational background combining Software Engineering with high-level Quantitative Finance and Risk Management.
+          Educational background combining Software Engineering with Quantitative Finance and Risk Management.
         </p>
-        <Row className="g-4 justify-content-center">
+        {/* Desktop: card grid */}
+        <Row className="g-4 justify-content-center d-none d-lg-flex">
           {educationData.map((edu, index) => (
             <Col key={index} lg={6} xl={4}>
               <Card className="h-100 shadow-sm border-0" style={{ borderLeft: `6px solid ${edu.color || 'var(--primary-color)'}` }}>
@@ -123,6 +125,31 @@ function Expertise() {
             </Col>
           ))}
         </Row>
+
+        {/* Mobile: accordion */}
+        <div className="d-lg-none">
+          {educationData.map((edu, index) => {
+            const isOpen = openEduAccordion === index;
+            return (
+              <div key={index} className="mb-2 rounded shadow-sm overflow-hidden" style={{ border: '1px solid var(--border-color)', borderLeft: `4px solid ${edu.color || 'var(--primary-color)'}` }}>
+                <button
+                  onClick={() => setOpenEduAccordion(isOpen ? null : index)}
+                  className="w-100 d-flex justify-content-between align-items-center px-3 py-3 fw-bold"
+                  style={{ background: 'var(--card-bg)', border: 'none', color: 'var(--primary-color)', fontSize: '0.95rem', cursor: 'pointer', textAlign: 'left' }}
+                >
+                  <span>{edu.degree}</span>
+                  <span style={{ transition: 'transform 0.2s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', fontSize: '0.8rem', flexShrink: 0, marginLeft: '8px' }}>▼</span>
+                </button>
+                {isOpen && (
+                  <div className="px-3 pb-3" style={{ backgroundColor: 'var(--card-bg)' }}>
+                    <p className="text-muted mb-1" style={{ fontSize: '0.85rem' }}>{edu.institution}</p>
+                    <p className="mb-0" style={{ fontSize: '0.9rem' }}>{edu.description}</p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </motion.div>
 
       <hr className="my-5" style={{ borderColor: 'var(--border-color)', opacity: 0.2 }} />
