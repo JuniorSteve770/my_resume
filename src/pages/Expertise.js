@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { educationData } from '../data/resumeData';
 
 const expertiseData = [
   {
@@ -82,7 +83,51 @@ const expertiseData = [
 
 function Expertise() {
   return (
-    <Container className="py-3">
+    <Container className="py-5" id="expertise">
+      {/* Education & Academic Path Section */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mb-5"
+      >
+        <h2 className="text-center display-6 mb-5 fw-bold">Academic Path & Dual Competence</h2>
+        <p className="text-center lead mb-5 text-muted">
+          Educational background combining Software Engineering with high-level Quantitative Finance and Risk Management.
+        </p>
+        <Row className="g-4 justify-content-center">
+          {educationData.map((edu, index) => (
+            <Col key={index} lg={6} xl={4}>
+              <Card className="h-100 shadow-sm border-0" style={{ borderLeft: `6px solid ${edu.color || 'var(--primary-color)'}` }}>
+                <Card.Body>
+                  <div className="d-flex align-items-center mb-3">
+                    {edu.logo && (
+                      <img
+                        src={edu.logo}
+                        alt={edu.institution}
+                        style={{ width: '45px', height: '45px', objectFit: 'contain', marginRight: '15px' }}
+                        className="rounded shadow-sm border p-1 bg-white"
+                      />
+                    )}
+                    <div>
+                      <Card.Title className="fw-bold text-primary mb-1">{edu.degree}</Card.Title>
+                      <Card.Subtitle className="text-muted">{edu.institution}</Card.Subtitle>
+                    </div>
+                  </div>
+                  <Card.Text>
+                    {edu.description}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </motion.div>
+
+      <hr className="my-5" style={{ borderColor: 'var(--border-color)', opacity: 0.2 }} />
+
+      <h2 className="text-center display-6 mb-5 fw-bold">Technical & Quantitative Expertise</h2>
       <Row className="g-5">
         {expertiseData.map((domain, index) => (
           <Col key={index} md={4} lg={6}>
@@ -92,8 +137,7 @@ function Expertise() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <Card className="text-center p-0 shadow-sm" style={{ backgroundColor: '#FCE5CD', borderRadius: '10px', minHeight: '50px' }}>
-                <Card.Body>
-                  <div style={{ fontSize: '3rem' }}>{domain.icon}</div>
+                <Card.Body className="pt-4">
                   <Card.Title className="mt-3 fw-bold">{domain.title}</Card.Title>
                   <h6 className="mt-4 fw-bold">📌 Compétences clés et Projets</h6>
                   <ul className="list-unstyled">

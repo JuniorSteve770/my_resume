@@ -1,144 +1,53 @@
 import React from 'react';
 import { Container, Table, Badge, Card, Row, Col, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-
+import { Link } from 'react-router-dom';
+import { projectsData } from '../data/resumeData';
 
 function Projects() {
-  const projects = [
-    {
-      domain: "Trading & Algorithmic Strategies",
-      projects: [
-
-        {
-          title: "Algorithmic Trading on Forex Market",
-          description: "Development of automated trading strategies with Broker indicators, real-time API data collection, and dynamic position sizing, risk management techniques.",
-          techStack: ["Python", "Machine Learning","Metatrader",  "YAhoo Finance API"],
-          links: []
-        },
-        {
-          title: "Backtesting Strategies",
-          description: "Backtesting frameworks to evaluate trading strategies, including MACD, RSI, and portfolio optimization using Riskfolio-Lib and Python Backtest ",
-          techStack: ["Python OOP", "Algo-Trading", "API paradigms", "Binance", "Risk Management"],
-          links: ["https://github.com/JuniorSteve770/PYTHON/blob/11d0e9e4987c66bd69e5420c7ff3b05892235f91/BackTesting_Crypto_Projects.ipynb"]
-        }
-      ]
-    },
-    {
-      domain: "Financial Projects (Modeling, Pricing, Risk) ",
-      projects: [
-        {
-          title: "VaR; CAViaR; SABR Modeling",
-          description: ["Implementation of SABR models for volatility smiles using log-normal and normal approaches, along with VaR and CAViaR risk modeling to evaluate and acktest market Risk exposure."],
-          techStack: ["Python fonctions", "OOP", "Financial Engineering", "Risk Analysis"],
-          links: ["https://colab.research.google.com/drive/1eAJnAuMp_T5dm2uIZc445vtATzpmarPL?usp=sharing","https://github.com/JuniorSteve770/PYTHON/blob/main/RAPORT_PROJET_Mesure%20de%20Risque.pdf" ]
-        },
-        {
-
-              title: "OPTION PRICING in C++",
-              description: "Implementation of Option pricing models for financial derivatives valuation. the project is made using C++ and Visual Studio Code  ",
-              techStack: ["C++", "Financial Engineering", "Derivatives", "Monte Carlo"],
-              links: ["https://github.com/JuniorSteve770/PYTHON/blob/0b53bf945e21eeec14295bfc183eeea59d1b33dc/Implementing-Bachelier-and-Black-Scholes-Models%20in%20C%2B%2B%20Projects.pdf"]
-        },
-        {
-              title: "VBA GASTROFOOD PROJECT",
-              description: "Built an application for accounting tasks, cash handling, register operations and sales, improving efficiency by 40%.",
-              techStack: ["C++", "Financial Engineering", "Derivatives", "Monte Carlo"],
-              links: ["https://youtu.be/b7QGe0MdypY","https://drive.google.com/file/d/13_h7xslbEDU5Zf3O6ky-KOXQPuC5g8kR/view?usp=sharing"]
-        },
-        {
-              title: "POWER BI DASHBOARDS",
-              description: "Covid Statistics, Olympic Game, Bank Customers",
-              techStack: ["Power BI", "Excell Sheets Datasets"],
-              links: ["https://www.youtube.com/watch?v=4DOZ52A6bjY"]
-        }
-      ]
-    },
-    {
-      domain: "Data Science & Machine Learning",
-      projects: [
-        {
-          title: "Stock Prediction with ML and Ensemble Models",
-          description: "Predicting stock trends using Random Forest, Boosting, and ML models.",
-          techStack: ["Machine Learning", "Data Science", "Python", "R"],
-          links: ["https://github.com/JuniorSteve770/PYTHON/blob/main/Projet%20BIG%20DATA.pdf", "https://github.com/JuniorSteve770/PYTHON/blob/main/PROJET_2PYTHON_KAMELA_Alesterd_M2_BIDABI.pdf.ipynb"]
-        },
-        {
-          title: "Clustering Financial Assets",
-          description: "K-Means and PCA for stock clustering and asset analysis.",
-          techStack: ["Python", "Clustering", "Finance Analytics"],
-          links: ["https://github.com/JuniorSteve770/PYTHON/blob/main/PROJET_2PYTHON_KAMELA_Alesterd_M2_BIDABI.pdf.ipynb"]
-        }
-      ]
-    },
-    {
-      domain: "IT & Web Development",
-      projects: [
-        {
-          title: "Web Scraping for Market Data such as NFP, FOMC, Economic News",
-          description: "Automated stock data extraction from financial sources. using Libraries",
-          techStack: ["HTTPX REQUEST", "Beautiful Soop", "Python Libraries", "JavaScript",  "API Integration"],
-          links: []
-        },
-        {
-          title: "KTC Center TSI Project",
-          description: "Website for branding services online for a Sport COmpany",
-          techStack: ["Linux OS","SFTP Server","PHP","Github Repos", "ReactJ", "Javascript/ HTML / CSS", "Boostrap"],
-          links: ["https://institut.ktc-center.net/"]
-        },
-        {
-          title: "My Beguinner Projects",
-          description: "here are the links to sevrals junior projects on bellow programming languages",
-          techStack: ["ReactJ; ","VueJs ;", "Javascript/ HTML / CSS", "Boostrap; ","google signIN"],
-          links: ["https://juniorsteve770.github.io/react01/", "https://juniorsteve770.github.io/flowplus","https://juniorsteve770.github.io/whatsapp_build/", "https://youtu.be/-Q5OBsDfG_k"]
-        },
-        {
-          title: "C#, C++ Software Toolstack; Network & Programming Paradigms",
-          description: "IT Concepts, Network, Programming parradigms",
-          techStack: ["Paradigms (OOP, MVC, SOLID); ", "Code Processes (TDD, BDD, SSD, Exeption Handling); ","Rest API, GraphQL;", "Network Protocols (TCP/IP, OSI, SFTP)"],
-          links: ["https://github.com/JuniorSteve770/PYTHON/blob/main/Projet%20Clients%20en%20C%23%2C%20MySQL%20et%20React.pdf"]
-        }
-      ]
-    }
-   
-  ];
   return (
     <section className="projects-section py-5" id="projects">
       <Container>
-        <motion.h2 
-          className="text-center display-5 mb-5"
+        <motion.h2
+          className="text-center display-6 mb-5 fw-bold"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          🚀 My Projects
+          My Projects
         </motion.h2>
 
         {/* Desktop View - Table */}
         <div className="d-none d-lg-block">
           <Table bordered hover responsive className="align-middle">
-            <thead className="table-dark">
+            <thead style={{ backgroundColor: 'var(--darker-bg)', borderBottom: '2px solid var(--border-color)' }}>
               <tr>
-                <th style={{ width: '20%' }}>Domain</th>
-                <th style={{ width: '50%' }}>Project Details & Tech Stack</th>
-                <th style={{ width: '30%' }}>Links</th>
+                <th style={{ width: '30%', fontWeight: '700' }}>Domain</th>
+                <th style={{ width: '50%', fontWeight: '700' }}>Project Details & Tech Stack</th>
+                <th style={{ width: '20%', fontWeight: '700' }}>Links</th>
               </tr>
             </thead>
             <tbody>
-              {projects.map((category, index) => (
+              {projectsData.map((category, index) => (
                 category.projects.map((project, idx) => (
                   <tr key={`${index}-${idx}`}>
-                    {idx === 0 && (                    
-                      <td rowSpan={category.projects.length} className="fw-bold align-middle">
-                        <Badge bg="badge bg-primary" className="fs-6 p-2 w-100">{category.domain}</Badge>
+                    {idx === 0 && (
+                      <td rowSpan={category.projects.length} className="fw-bold align-middle text-center" style={{ verticalAlign: 'top', width: '30%' }}>
+                        <div className="p-2 mb-3 bg-primary text-white rounded fs-6 shadow-sm">{category.domain}</div>
+                        {category.image && (
+                          <div className="mt-3">
+                            <img src={category.image} alt={category.domain} className="img-fluid rounded shadow" style={{ maxHeight: '250px', objectFit: 'cover', width: '100%' }} />
+                          </div>
+                        )}
                       </td>
                     )}
                     <td>
                       <h5 className="fw-bold text-primary">{project.title}</h5>
-                      <p className="text-muted">{project.description}</p>
+                      <p className="fw-medium theme-text">{project.description}</p>
                       <div className="d-flex flex-wrap gap-2">
                         {project.techStack.map((tech, id) => (
-                          <Badge bg="light" text="dark" className="p-2 border" key={id}>
+                          <Badge bg="secondary" className="p-2" key={id}>
                             {tech}
                           </Badge>
                         ))}
@@ -146,18 +55,21 @@ function Projects() {
                     </td>
                     <td>
                       <div className="d-grid gap-2">
-                        {project.links.map((link, linkIdx) => (
-                          <Button 
-                            variant="outline-primary" 
-                            href={link} 
-                            target="_blank" 
-                            rel="noreferrer"
-                            key={linkIdx}
-                            className="text-start"
-                          >
-                            View Project {linkIdx + 1} →
-                          </Button>
-                        ))}
+                        {project.links.map((link, linkIdx) => {
+                          const isInternal = link.startsWith('/');
+                          return (
+                            <Button
+                              variant="outline-primary"
+                              {...(isInternal
+                                ? { as: Link, to: link }
+                                : { href: link, target: "_blank", rel: "noreferrer" })}
+                              key={linkIdx}
+                              className="text-start"
+                            >
+                              Explore Project Case {linkIdx + 1} →
+                            </Button>
+                          );
+                        })}
                         {project.links.length === 0 && (
                           <span className="text-muted">Coming soon</span>
                         )}
@@ -173,12 +85,17 @@ function Projects() {
         {/* Mobile View - Cards */}
         <div className="d-lg-none">
           <Row className="g-4">
-            {projects.map((category, index) => (
+            {projectsData.map((category, index) => (
               <React.Fragment key={index}>
-                <Col xs={12}>
-                  <h4 className="fw-bold text-center mb-3 p-2 badge bg-primary text-white rounded">
+                <Col xs={12} className="px-0 px-md-3">
+                  <h4 className="fw-bold text-center mb-0 p-3 bg-primary text-white rounded shadow-sm w-100">
                     {category.domain}
                   </h4>
+                  {category.image && (
+                    <div className="mt-3 mb-4 text-center">
+                      <img src={category.image} alt={category.domain} className="img-fluid rounded shadow border border-secondary w-100" style={{ maxHeight: '280px', objectFit: 'cover' }} />
+                    </div>
+                  )}
                 </Col>
                 {category.projects.map((project, idx) => (
                   <Col xs={12} key={idx}>
@@ -187,32 +104,35 @@ function Projects() {
                         <Card.Title className="fw-bold text-primary">
                           {project.title}
                         </Card.Title>
-                        <Card.Text className="text-muted">
+                        <Card.Text className="fw-medium theme-text">
                           {project.description}
                         </Card.Text>
                         <div className="mb-3">
                           <h6 className="fw-bold">Tech Stack:</h6>
                           <div className="d-flex flex-wrap gap-2">
                             {project.techStack.map((tech, id) => (
-                              <Badge bg="light" text="dark" className="p-2 border" key={id}>
+                              <Badge bg="secondary" className="p-2" key={id}>
                                 {tech}
                               </Badge>
                             ))}
                           </div>
                         </div>
                         <div className="d-grid gap-2">
-                          {project.links.map((link, linkIdx) => (
-                            <Button 
-                              variant="outline-primary" 
-                              href={link} 
-                              target="_blank" 
-                              rel="noreferrer"
-                              key={linkIdx}
-                              size="sm"
-                            >
-                              View Project {linkIdx + 1} →
-                            </Button>
-                          ))}
+                          {project.links.map((link, linkIdx) => {
+                            const isInternal = link.startsWith('/');
+                            return (
+                              <Button
+                                variant="outline-primary"
+                                {...(isInternal
+                                  ? { as: Link, to: link }
+                                  : { href: link, target: "_blank", rel: "noreferrer" })}
+                                key={linkIdx}
+                                size="sm"
+                              >
+                                Explore Project Case {linkIdx + 1} →
+                              </Button>
+                            );
+                          })}
                           {project.links.length === 0 && (
                             <span className="text-muted text-center">Coming soon</span>
                           )}
