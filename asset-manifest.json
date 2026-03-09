@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/my_resume/static/css/main.d2bcb22d.css",
-    "main.js": "/my_resume/static/js/main.616d4352.js",
+    "main.css": "/my_resume/static/css/main.f18bb533.css",
+    "main.js": "/my_resume/static/js/main.ff207aba.js",
+    "static/media/machine learning 181910.png": "/my_resume/static/media/machine learning 181910.c291ff4a34328fd5a469.png",
     "static/media/bberg.jpg": "/my_resume/static/media/bberg.657aca14188920f02714.jpg",
     "static/media/risk management.jpg": "/my_resume/static/media/risk management.a0f2b5ed82f10ded7575.jpg",
     "static/media/python_stats.jpg": "/my_resume/static/media/python_stats.685f98767d4a178b46fe.jpg",
@@ -13,17 +14,16 @@
     "static/media/Csh.jpg": "/my_resume/static/media/Csh.ae6e55a60b3972f245c0.jpg",
     "static/media/Hottinguer.JPG": "/my_resume/static/media/Hottinguer.83b626ead2ee06049b8d.JPG",
     "static/media/CsharpMultitrad.jpg": "/my_resume/static/media/CsharpMultitrad.6b0e681a29350c9576ba.jpg",
-    "static/media/CV_Alesterd KAMELA.pdf": "/my_resume/static/media/CV_Alesterd KAMELA.902ebeb4a8955a73e458.pdf",
     "static/media/bmcBloomberg.jpg": "/my_resume/static/media/bmcBloomberg.82285d7a749ae25d2664.jpg",
     "static/media/kevmax.JPG": "/my_resume/static/media/kevmax.23b16bd434c1e07df3e7.JPG",
     "static/media/NatixisGrd.JPG": "/my_resume/static/media/NatixisGrd.117d09ebf6b9a3e2003e.JPG",
     "static/media/portotrad.JPG": "/my_resume/static/media/portotrad.5b56303bde8c57d7d8b5.JPG",
     "index.html": "/my_resume/index.html",
-    "main.d2bcb22d.css.map": "/my_resume/static/css/main.d2bcb22d.css.map",
-    "main.616d4352.js.map": "/my_resume/static/js/main.616d4352.js.map"
+    "main.f18bb533.css.map": "/my_resume/static/css/main.f18bb533.css.map",
+    "main.ff207aba.js.map": "/my_resume/static/js/main.ff207aba.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2bcb22d.css",
-    "static/js/main.616d4352.js"
+    "static/css/main.f18bb533.css",
+    "static/js/main.ff207aba.js"
   ]
 }
