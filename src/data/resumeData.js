@@ -10,6 +10,7 @@ export const marketsData = [
   "Debt Capital Market",
   "Derivatives & Structured Products",
   "Forex",
+  "Fixed-Income",
   "Interest Rates",
   "Credit Risk",
   "Cryptocurrencies"
