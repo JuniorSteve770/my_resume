@@ -20,12 +20,12 @@ export const techStack = [
   {
     category: "Software Engineering & Cloud",
     skills: [
-      "Python (Flask, FastAPI) / C++", 
-      "React / Vue / JS", 
+      "Python (Flask, FastAPI) / C# & C++", 
+      "JS (React-js / Vue-js)", 
       "SQL / NoSQL (MongoDB)", 
-      "AWS / Docker / CI-CD", 
+      "CI-CD/ GIT/ AWS / Docker", 
       "REST API / Microservices", 
-      "OOP & Design Patterns"
+      "OOP & S.O.L.I.D Design Patterns"
     ]
   },
   {
