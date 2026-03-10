@@ -97,9 +97,9 @@ export const experiencesData = [
     role: "Financial Analyst & VBA Developer",
     logo: Natixis,
     missions: [
-      "Analyzed and processed complex trades (bonds, equity, repo) via Summit Sec with an emphasis on the fixed income life cycle.",
-      "Designed and developed a VBA-based ETL system and dynamic pivot tables to automate BI/BA data flows, improving operational performance by 20%.",
-      "Managed post-trade operations, valuation controls, settlements, and trade reconciliations."
+      "Analyzed and processed complex trades (bonds, equity, FX-incom, repo) via Summit Securities and SOPHIS with an emphasis on the fixed income life cycle.",
+      "Designed and developed a VBA-based ETL system and dynamic pivot tables to automate BI/BA data flows, improving Teams operational performance by 20%.",
+      "Managed post-trade operations, valuation controls, settlements, and trade reconciliations with Conterparties."
     ],
     techStack: ["VBA", "Excel", "Summit Sec", "Bloomberg", "Track"]
   },
@@ -112,7 +112,7 @@ export const experiencesData = [
       "Built automated data scraping and REST API pipelines to extract economic indicators (NFP, CPI, FED Rates) for fundamental analysis.",
       "Designed, backtested, and optimized trading strategies (scalping, swing) and created automated PnL monitoring dashboards."
     ],
-    techStack: ["Python", "C#", "MetaTrader 4/5", "REST APIs", "Web Scraping"]
+    techStack: ["Python", "C#", "MetaTrader 4/5", "REST APIs", "Web Scraping", "FIX Protocol"]
   },
   {
     company: "KEVMAX SARL",
