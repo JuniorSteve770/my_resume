@@ -13,7 +13,7 @@ const aiProjectsData = [
             "Probability Mapping: Mapped the probability density functions of asset returns conditioned on each identified market regime to detect structural breaks."
         ],
         results: [
-            "Mathematical Validation: Established predictive scoring pipelines proving that a static 5m strategy's Win-Rate (e.g., 65%) surges to 88% when algorithmically aligned with specific ML-discovered Macro Regimes.",
+            "Mathematical Validation: Established predictive scoring pipelines proving that a static 5m strategy's Win-Rate (e.g., 55%) surges to 68% when algorithmically aligned with specific ML-discovered Macro Regimes.",
             "Risk Mitigation: Reduced holding-period drawdowns by 35% by enabling the system to halt trading automatically when a 'High-Risk / Chaotic' regime is detected."
         ],
         impact: "Provides actionable, statistically sound insights by implementing machine learning directly on complex volatility datasets, bridging the gap between theoretical data science and alpha generation.",
