@@ -28,8 +28,8 @@ function Expertise22() {
     {
       title: "Technology Stack",
       items: [
-        "Python & C++",
-        "React/Vue.js",
+        "Python, C# & C++",
+        "React/redux, Vue.js, Angular",
         "SQL/NoSQL",
         "API Integration"
       ],
