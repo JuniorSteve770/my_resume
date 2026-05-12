@@ -65,7 +65,7 @@ const expertiseData = [
     icon: '💻',
     details: {
       competencies: [
-        'Languages: Python, SQL, VBA, C++, React',
+        'Languages: Python, SQL, VBA, C#, C++, React/Redux, Angular',
         'Business tools & process automation (VBA/Python)',
         'ETL, REST APIs, market data processing',
         'Web & server application deployment',
