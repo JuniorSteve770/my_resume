@@ -14,7 +14,7 @@ function Hero() {
         >
           <AnimationTitles title="Full Stack Developer & Data Analyst" />
           <p className="gray-90 mt-3 fs-5">
-            Specialized in building robust applications with Python, C#, React.js, and data analysis with Power BI
+            Specialized in building robust applications with Python, C#/C++, React.js/Redux, Angular, Vue Js, and data analysis with Power BI
           </p>
           <div className="d-flex gap-3">
             <Button className="m-0 my-3 px-4 py-2 fs-5">View Projects</Button>
