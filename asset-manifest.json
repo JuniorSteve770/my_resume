@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my_resume/static/css/main.f18bb533.css",
-    "main.js": "/my_resume/static/js/main.975550f4.js",
+    "main.js": "/my_resume/static/js/main.d7475f66.js",
     "static/media/machine learning 181910.png": "/my_resume/static/media/machine learning 181910.c291ff4a34328fd5a469.png",
     "static/media/bberg.jpg": "/my_resume/static/media/bberg.657aca14188920f02714.jpg",
     "static/media/risk management.jpg": "/my_resume/static/media/risk management.a0f2b5ed82f10ded7575.jpg",
@@ -21,10 +21,10 @@
     "static/media/Hilbert.jpg": "/my_resume/static/media/Hilbert.207027980d4a47eb7d92.jpg",
     "index.html": "/my_resume/index.html",
     "main.f18bb533.css.map": "/my_resume/static/css/main.f18bb533.css.map",
-    "main.975550f4.js.map": "/my_resume/static/js/main.975550f4.js.map"
+    "main.d7475f66.js.map": "/my_resume/static/js/main.d7475f66.js.map"
   },
   "entrypoints": [
     "static/css/main.f18bb533.css",
-    "static/js/main.975550f4.js"
+    "static/js/main.d7475f66.js"
   ]
 }
